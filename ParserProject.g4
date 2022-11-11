@@ -23,6 +23,6 @@ NUMBER : INTEGER | FLOAT ;
 BOOL : 'true' | 'false';  
 INTEGER : '0' | '-'?[0-9]+ ;   
 FLOAT :  INTEGER '.' [0-9]+ ; 
-WHITESPACE : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
 NAME : [a-zA-Z][a-zA-Z0-9]* ; 
 STRING : '"' ~('"')* '"' ;
+WHITESPACE : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
