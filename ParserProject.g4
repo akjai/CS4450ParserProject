@@ -10,17 +10,16 @@ STRING : '"' ~('"')* '"' ;
 COMMENT : '#' ~('\r' | '\n')* -> skip ;
 
 // Parser arithmetic operators 
-multiply_operator  : NUMBER '*' NUMBER ;     
-divide_operator  : NUMBER '/' NUMBER ;    
-mod_operator  : NUMBER '%' NUMBER ;      
-add_operator  : NUMBER '+' NUMBER ;
-minus_operator  : NUMBER '-' NUMBER ;     
-
-// Parser assignment operators 
-add_assignment : variable '+=' NUMBER; 
-minus_assignment : variable '-=' NUMBER; 
-multiply_assignment : variable '*=' NUMBER; 
-divide_assignment : variable '/=' NUMBER; 
+operators:
+NUMBER '*' NUMBER  |    
+NUMBER '/' NUMBER  |   
+NUMBER '%' NUMBER  |    
+NUMBER '+' NUMBER  |
+NUMBER'-'NUMBER |
+variable '+=' NUMBER |
+variable '-=' NUMBER |
+variable '*=' NUMBER |
+variable '/=' NUMBER ;
 
 // Parser variables
 assignment : '=' ;
