@@ -11,9 +11,9 @@ How to Use/Run the parser (Mac OS):
 2: Download latest version of Java for your device.
 3: Run following commands in terminal:
   - sudo cp antlr-4.9.2-complete.jar /usr/local/lib/
-  - export CLASSPATH=".:/usr/local/lib/antlr-4.9.3-complete.jar:$CLASSPATH"
-  - alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.9.3-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-  - alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.9.3-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
+  - export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
+  - alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+  - alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
 4: Clone the repo into your local directory.
   - git clone https://github.com/akjai/CS4450ParserProject.git
 5: In the project folder, run the following commands:
