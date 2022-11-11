@@ -31,7 +31,7 @@ public class ParserProjectParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'*'", "'/'", "'%'", "'+'", "'-'", "'+='", "'-='", "'*='", "'/='", 
+			null, "'-'", "'*'", "'/'", "'%'", "'+'", "'+='", "'-='", "'*='", "'/='", 
 			"'='"
 		};
 	}
@@ -112,119 +112,301 @@ public class ParserProjectParser extends Parser {
 		enterRule(_localctx, 0, RULE_operators);
 		int _la;
 		try {
-			setState(45);
+			setState(123);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(8);
+				setState(11);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(8);
+					match(T__0);
+					}
+					}
+					setState(13);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(14);
 				match(NUMBER);
-				setState(9);
-				match(T__0);
-				setState(10);
+				setState(15);
+				match(T__1);
+				setState(19);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(16);
+					match(T__0);
+					}
+					}
+					setState(21);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(22);
 				match(NUMBER);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(11);
+				setState(26);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(23);
+					match(T__0);
+					}
+					}
+					setState(28);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(29);
 				match(NUMBER);
-				setState(12);
-				match(T__1);
-				setState(13);
+				setState(30);
+				match(T__2);
+				setState(34);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(31);
+					match(T__0);
+					}
+					}
+					setState(36);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(37);
 				match(NUMBER);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(14);
+				setState(41);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(38);
+					match(T__0);
+					}
+					}
+					setState(43);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(44);
 				match(NUMBER);
-				setState(15);
-				match(T__2);
-				setState(16);
+				setState(45);
+				match(T__3);
+				setState(49);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(46);
+					match(T__0);
+					}
+					}
+					setState(51);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(52);
 				match(NUMBER);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(17);
+				setState(56);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(53);
+					match(T__0);
+					}
+					}
+					setState(58);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(59);
 				match(NUMBER);
-				setState(18);
-				match(T__3);
-				setState(19);
+				setState(60);
+				match(T__4);
+				setState(64);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(61);
+					match(T__0);
+					}
+					}
+					setState(66);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(67);
 				match(NUMBER);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(20);
-				match(NUMBER);
-				setState(21);
-				match(T__4);
-				setState(25);
+				setState(71);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==T__4) {
+				while (_la==T__0) {
 					{
 					{
-					setState(22);
-					match(T__4);
+					setState(68);
+					match(T__0);
 					}
 					}
-					setState(27);
+					setState(73);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(28);
+				setState(74);
+				match(NUMBER);
+				setState(75);
+				match(T__0);
+				setState(79);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(76);
+					match(T__0);
+					}
+					}
+					setState(81);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(82);
 				match(NUMBER);
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(29);
+				setState(83);
 				variable();
-				setState(30);
+				setState(84);
 				match(T__5);
-				setState(31);
+				setState(88);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(85);
+					match(T__0);
+					}
+					}
+					setState(90);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(91);
 				match(NUMBER);
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(33);
+				setState(93);
 				variable();
-				setState(34);
+				setState(94);
 				match(T__6);
-				setState(35);
+				setState(98);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(95);
+					match(T__0);
+					}
+					}
+					setState(100);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(101);
 				match(NUMBER);
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(37);
+				setState(103);
 				variable();
-				setState(38);
+				setState(104);
 				match(T__7);
-				setState(39);
+				setState(108);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(105);
+					match(T__0);
+					}
+					}
+					setState(110);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(111);
 				match(NUMBER);
 				}
 				break;
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(41);
+				setState(113);
 				variable();
-				setState(42);
+				setState(114);
 				match(T__8);
-				setState(43);
+				setState(118);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__0) {
+					{
+					{
+					setState(115);
+					match(T__0);
+					}
+					}
+					setState(120);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(121);
 				match(NUMBER);
 				}
 				break;
@@ -254,7 +436,7 @@ public class ParserProjectParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(47);
+			setState(125);
 			match(T__9);
 			}
 		}
@@ -289,11 +471,11 @@ public class ParserProjectParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(49);
+			setState(127);
 			match(NAME);
-			setState(50);
+			setState(128);
 			assignment();
-			setState(51);
+			setState(129);
 			variable();
 			}
 		}
@@ -326,7 +508,7 @@ public class ParserProjectParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(53);
+			setState(131);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << NUMBER) | (1L << BOOL) | (1L << NAME) | (1L << STRING))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -350,22 +532,42 @@ public class ParserProjectParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24:\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2"+
-		"\3\2\3\2\7\2\32\n\2\f\2\16\2\35\13\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3"+
-		"\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\5\2\60\n\2\3\3\3\3\3\4\3\4\3\4\3\4"+
-		"\3\5\3\5\3\5\2\2\6\2\4\6\b\2\3\4\2\r\16\22\23\2>\2/\3\2\2\2\4\61\3\2\2"+
-		"\2\6\63\3\2\2\2\b\67\3\2\2\2\n\13\7\r\2\2\13\f\7\3\2\2\f\60\7\r\2\2\r"+
-		"\16\7\r\2\2\16\17\7\4\2\2\17\60\7\r\2\2\20\21\7\r\2\2\21\22\7\5\2\2\22"+
-		"\60\7\r\2\2\23\24\7\r\2\2\24\25\7\6\2\2\25\60\7\r\2\2\26\27\7\r\2\2\27"+
-		"\33\7\7\2\2\30\32\7\7\2\2\31\30\3\2\2\2\32\35\3\2\2\2\33\31\3\2\2\2\33"+
-		"\34\3\2\2\2\34\36\3\2\2\2\35\33\3\2\2\2\36\60\7\r\2\2\37 \5\b\5\2 !\7"+
-		"\b\2\2!\"\7\r\2\2\"\60\3\2\2\2#$\5\b\5\2$%\7\t\2\2%&\7\r\2\2&\60\3\2\2"+
-		"\2\'(\5\b\5\2()\7\n\2\2)*\7\r\2\2*\60\3\2\2\2+,\5\b\5\2,-\7\13\2\2-.\7"+
-		"\r\2\2.\60\3\2\2\2/\n\3\2\2\2/\r\3\2\2\2/\20\3\2\2\2/\23\3\2\2\2/\26\3"+
-		"\2\2\2/\37\3\2\2\2/#\3\2\2\2/\'\3\2\2\2/+\3\2\2\2\60\3\3\2\2\2\61\62\7"+
-		"\f\2\2\62\5\3\2\2\2\63\64\7\22\2\2\64\65\5\4\3\2\65\66\5\b\5\2\66\7\3"+
-		"\2\2\2\678\t\2\2\28\t\3\2\2\2\4\33/";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24\u0088\4\2\t\2"+
+		"\4\3\t\3\4\4\t\4\4\5\t\5\3\2\7\2\f\n\2\f\2\16\2\17\13\2\3\2\3\2\3\2\7"+
+		"\2\24\n\2\f\2\16\2\27\13\2\3\2\3\2\7\2\33\n\2\f\2\16\2\36\13\2\3\2\3\2"+
+		"\3\2\7\2#\n\2\f\2\16\2&\13\2\3\2\3\2\7\2*\n\2\f\2\16\2-\13\2\3\2\3\2\3"+
+		"\2\7\2\62\n\2\f\2\16\2\65\13\2\3\2\3\2\7\29\n\2\f\2\16\2<\13\2\3\2\3\2"+
+		"\3\2\7\2A\n\2\f\2\16\2D\13\2\3\2\3\2\7\2H\n\2\f\2\16\2K\13\2\3\2\3\2\3"+
+		"\2\7\2P\n\2\f\2\16\2S\13\2\3\2\3\2\3\2\3\2\7\2Y\n\2\f\2\16\2\\\13\2\3"+
+		"\2\3\2\3\2\3\2\3\2\7\2c\n\2\f\2\16\2f\13\2\3\2\3\2\3\2\3\2\3\2\7\2m\n"+
+		"\2\f\2\16\2p\13\2\3\2\3\2\3\2\3\2\3\2\7\2w\n\2\f\2\16\2z\13\2\3\2\3\2"+
+		"\5\2~\n\2\3\3\3\3\3\4\3\4\3\4\3\4\3\5\3\5\3\5\2\2\6\2\4\6\b\2\3\4\2\r"+
+		"\16\22\23\2\u0099\2}\3\2\2\2\4\177\3\2\2\2\6\u0081\3\2\2\2\b\u0085\3\2"+
+		"\2\2\n\f\7\3\2\2\13\n\3\2\2\2\f\17\3\2\2\2\r\13\3\2\2\2\r\16\3\2\2\2\16"+
+		"\20\3\2\2\2\17\r\3\2\2\2\20\21\7\r\2\2\21\25\7\4\2\2\22\24\7\3\2\2\23"+
+		"\22\3\2\2\2\24\27\3\2\2\2\25\23\3\2\2\2\25\26\3\2\2\2\26\30\3\2\2\2\27"+
+		"\25\3\2\2\2\30~\7\r\2\2\31\33\7\3\2\2\32\31\3\2\2\2\33\36\3\2\2\2\34\32"+
+		"\3\2\2\2\34\35\3\2\2\2\35\37\3\2\2\2\36\34\3\2\2\2\37 \7\r\2\2 $\7\5\2"+
+		"\2!#\7\3\2\2\"!\3\2\2\2#&\3\2\2\2$\"\3\2\2\2$%\3\2\2\2%\'\3\2\2\2&$\3"+
+		"\2\2\2\'~\7\r\2\2(*\7\3\2\2)(\3\2\2\2*-\3\2\2\2+)\3\2\2\2+,\3\2\2\2,."+
+		"\3\2\2\2-+\3\2\2\2./\7\r\2\2/\63\7\6\2\2\60\62\7\3\2\2\61\60\3\2\2\2\62"+
+		"\65\3\2\2\2\63\61\3\2\2\2\63\64\3\2\2\2\64\66\3\2\2\2\65\63\3\2\2\2\66"+
+		"~\7\r\2\2\679\7\3\2\28\67\3\2\2\29<\3\2\2\2:8\3\2\2\2:;\3\2\2\2;=\3\2"+
+		"\2\2<:\3\2\2\2=>\7\r\2\2>B\7\7\2\2?A\7\3\2\2@?\3\2\2\2AD\3\2\2\2B@\3\2"+
+		"\2\2BC\3\2\2\2CE\3\2\2\2DB\3\2\2\2E~\7\r\2\2FH\7\3\2\2GF\3\2\2\2HK\3\2"+
+		"\2\2IG\3\2\2\2IJ\3\2\2\2JL\3\2\2\2KI\3\2\2\2LM\7\r\2\2MQ\7\3\2\2NP\7\3"+
+		"\2\2ON\3\2\2\2PS\3\2\2\2QO\3\2\2\2QR\3\2\2\2RT\3\2\2\2SQ\3\2\2\2T~\7\r"+
+		"\2\2UV\5\b\5\2VZ\7\b\2\2WY\7\3\2\2XW\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2Z[\3"+
+		"\2\2\2[]\3\2\2\2\\Z\3\2\2\2]^\7\r\2\2^~\3\2\2\2_`\5\b\5\2`d\7\t\2\2ac"+
+		"\7\3\2\2ba\3\2\2\2cf\3\2\2\2db\3\2\2\2de\3\2\2\2eg\3\2\2\2fd\3\2\2\2g"+
+		"h\7\r\2\2h~\3\2\2\2ij\5\b\5\2jn\7\n\2\2km\7\3\2\2lk\3\2\2\2mp\3\2\2\2"+
+		"nl\3\2\2\2no\3\2\2\2oq\3\2\2\2pn\3\2\2\2qr\7\r\2\2r~\3\2\2\2st\5\b\5\2"+
+		"tx\7\13\2\2uw\7\3\2\2vu\3\2\2\2wz\3\2\2\2xv\3\2\2\2xy\3\2\2\2y{\3\2\2"+
+		"\2zx\3\2\2\2{|\7\r\2\2|~\3\2\2\2}\r\3\2\2\2}\34\3\2\2\2}+\3\2\2\2}:\3"+
+		"\2\2\2}I\3\2\2\2}U\3\2\2\2}_\3\2\2\2}i\3\2\2\2}s\3\2\2\2~\3\3\2\2\2\177"+
+		"\u0080\7\f\2\2\u0080\5\3\2\2\2\u0081\u0082\7\22\2\2\u0082\u0083\5\4\3"+
+		"\2\u0083\u0084\5\b\5\2\u0084\7\3\2\2\2\u0085\u0086\t\2\2\2\u0086\t\3\2"+
+		"\2\2\21\r\25\34$+\63:BIQZdnx}";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

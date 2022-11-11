@@ -12,15 +12,15 @@ COMMENT : '#' ~('\r' | '\n')* -> skip ;
 
 // Parser arithmetic operators 
 operators:
-NUMBER '*' NUMBER  |    
-NUMBER '/' NUMBER  |   
-NUMBER '%' NUMBER  |    
-NUMBER '+' NUMBER  |
-NUMBER '-' '-'*NUMBER |
-variable '+=' NUMBER |
-variable '-=' NUMBER |
-variable '*=' NUMBER |
-variable '/=' NUMBER ;
+'-'*NUMBER '*' '-'*NUMBER  |    
+'-'*NUMBER '/' '-'*NUMBER  |   
+'-'*NUMBER '%' '-'*NUMBER  |    
+'-'*NUMBER '+' '-'*NUMBER  |
+'-'*NUMBER '-' '-'*NUMBER |
+variable '+=' '-'*NUMBER |
+variable '-=' '-'*NUMBER |
+variable '*=' '-'*NUMBER |
+variable '/=' '-'*NUMBER ;
 
 // Parser variables
 assignment : '=' ;
