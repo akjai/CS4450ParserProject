@@ -1,11 +1,20 @@
 grammar ParserProject;
 
+// expressions
+expr :   '(' expr ')'                         
+     |   op=('+'|'-') expr                    
+     |   left=expr op=('*'|'/'|'%') right=expr    
+     |   left=expr op=('+'|'-') right=expr    
+     |   func=NAME '(' expr ')'                 
+     |   value=NUMBER                            
+     ;
+
 // Parser arithmetic operators 
-multiply_operator  : NUMBER '*' NUMBER ;     
-divide_operator  : NUMBER '/' NUMBER ;    
-mod_operator  : NUMBER '%' NUMBER ;      
-add_operator  : NUMBER '+' NUMBER ;
-minus_operator  : NUMBER '-' NUMBER ;     
+multiply_operator  :  '*'  ;     
+divide_operator  :  '/'  ;    
+mod_operator  :  '%'  ;      
+add_operator  :  '+'  ;
+minus_operator  :  '-'  ;     
 
 // Parser assignment operators 
 assignment : '=' ;
