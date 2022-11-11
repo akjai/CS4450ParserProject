@@ -15,14 +15,14 @@ multiply_assignment : NUMBER '*=' NUMBER;
 divide_assignment : NUMBER '/=' NUMBER; 
 
 // Parser variables
-variable_assignment : variable_name assignment variable;
-variable_name : ; 
+variable_assignment : NAME assignment variable;
 variable : NUMBER | STRING | BOOL; 
 
 // Lexer types 
-STRING : '"' [a-z]+ '"'; 
 NUMBER : INTEGER | FLOAT ;   
 BOOL : 'true' | 'false';  
 INTEGER : '0' | '-'?[0-9]+ ;   
 FLOAT :  INTEGER '.' [0-9]+ ; 
 WHITESPACE : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
+NAME : [a-zA-Z][a-zA-Z0-9]* ; 
+STRING : '"' ~('"')* '"' ;
