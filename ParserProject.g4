@@ -20,9 +20,10 @@ variable : NUMBER | STRING | BOOL;
 
 // Lexer types 
 NUMBER : INTEGER | FLOAT ;   
-BOOL : 'true' | 'false';  
+BOOL : 'True' | 'False';  
 INTEGER : '0' | '-'?[0-9]+ ;   
 FLOAT :  INTEGER '.' [0-9]+ ; 
 WHITESPACE : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
-NAME : [a-zA-Z][a-zA-Z0-9]* ; 
+NAME : [a-zA-Z|_][a-zA-Z0-9|_]* ; 
 STRING : '"' ~('"')* '"' ;
+COMMENT : '#' ~('\r' | '\n')* -> skip ;

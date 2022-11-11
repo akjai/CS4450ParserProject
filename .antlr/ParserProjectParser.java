@@ -1,4 +1,4 @@
-// Generated from /Users/ankitjain/CS4450ParserProject/ParserProject.g4 by ANTLR 4.9.2
+// Generated from /Users/jamestipton/Documents/GitHub/Propl/CS4450ParserProject/ParserProject.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -18,7 +18,7 @@ public class ParserProjectParser extends Parser {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, NUMBER=11, BOOL=12, INTEGER=13, FLOAT=14, WHITESPACE=15, NAME=16, 
-		STRING=17;
+		STRING=17, COMMENT=18;
 	public static final int
 		RULE_add_operator = 0, RULE_minus_operator = 1, RULE_multiply_operator = 2, 
 		RULE_divide_operator = 3, RULE_mod_operator = 4, RULE_assignment = 5, 
@@ -43,7 +43,7 @@ public class ParserProjectParser extends Parser {
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, "NUMBER", 
-			"BOOL", "INTEGER", "FLOAT", "WHITESPACE", "NAME", "STRING"
+			"BOOL", "INTEGER", "FLOAT", "WHITESPACE", "NAME", "STRING", "COMMENT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -529,7 +529,7 @@ public class ParserProjectParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\23G\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24G\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
 		"\f\t\f\4\r\t\r\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\5\3\5"+
 		"\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\n\3"+
