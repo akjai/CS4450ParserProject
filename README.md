@@ -21,3 +21,4 @@ How to Use/Run the parser (Mac OS):
   - javac ParserProject*.java
   - grun ParserProject \<RULE\> -tree or grun ParserProject \<RULE\>  -gui
   
+All in one line: antlr4 ParserProject.g4; javac ParserProject*.java; grun ParserProject \<RULE\>  -gui
