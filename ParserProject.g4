@@ -1,5 +1,6 @@
 grammar ParserProject;
 
+// Lexer types 
 NUMBER : '-'?INTEGER | '-'?FLOAT ;   
 BOOL : 'True' | 'False';  
 INTEGER : '0' | [0-9]+ ;   
@@ -15,7 +16,7 @@ NUMBER '*' NUMBER  |
 NUMBER '/' NUMBER  |   
 NUMBER '%' NUMBER  |    
 NUMBER '+' NUMBER  |
-NUMBER'-'NUMBER |
+NUMBER '-' NUMBER |
 variable '+=' NUMBER |
 variable '-=' NUMBER |
 variable '*=' NUMBER |
@@ -25,6 +26,3 @@ variable '/=' NUMBER ;
 assignment : '=' ;
 variable_assignment : NAME assignment variable;
 variable : NUMBER | STRING | BOOL | NAME; 
-
-// Lexer types 
-
