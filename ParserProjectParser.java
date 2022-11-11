@@ -1,4 +1,4 @@
-// Generated from java-escape by ANTLR 4.11.1
+// Generated from ParserProject.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,33 +8,42 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class ParserProjectParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.11.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, ID=2, WS=3;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
+		T__9=10, NUMBER=11, BOOL=12, INTEGER=13, FLOAT=14, WHITESPACE=15, NAME=16, 
+		STRING=17, COMMENT=18;
 	public static final int
-		RULE_hi = 0;
+		RULE_multiply_operator = 0, RULE_divide_operator = 1, RULE_mod_operator = 2, 
+		RULE_add_operator = 3, RULE_minus_operator = 4, RULE_add_assignment = 5, 
+		RULE_minus_assignment = 6, RULE_multiply_assignment = 7, RULE_divide_assignment = 8, 
+		RULE_assignment = 9, RULE_variable_assignment = 10, RULE_variable = 11;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"hi"
+			"multiply_operator", "divide_operator", "mod_operator", "add_operator", 
+			"minus_operator", "add_assignment", "minus_assignment", "multiply_assignment", 
+			"divide_assignment", "assignment", "variable_assignment", "variable"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'hello'"
+			null, "'*'", "'/'", "'%'", "'+'", "'-'", "'+='", "'-='", "'*='", "'/='", 
+			"'='"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "ID", "WS"
+			null, null, null, null, null, null, null, null, null, null, null, "NUMBER", 
+			"BOOL", "INTEGER", "FLOAT", "WHITESPACE", "NAME", "STRING", "COMMENT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -72,7 +81,7 @@ public class ParserProjectParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "java-escape"; }
+	public String getGrammarFileName() { return "ParserProject.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -88,33 +97,521 @@ public class ParserProjectParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	@SuppressWarnings("CheckReturnValue")
-	public static class HiContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(ParserProjectParser.ID, 0); }
-		public HiContext(ParserRuleContext parent, int invokingState) {
+	public static class Multiply_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Multiply_operatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_hi; }
+		@Override public int getRuleIndex() { return RULE_multiply_operator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterHi(this);
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterMultiply_operator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitHi(this);
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitMultiply_operator(this);
 		}
 	}
 
-	public final HiContext hi() throws RecognitionException {
-		HiContext _localctx = new HiContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_hi);
+	public final Multiply_operatorContext multiply_operator() throws RecognitionException {
+		Multiply_operatorContext _localctx = new Multiply_operatorContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_multiply_operator);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(2);
+			setState(24);
+			match(NUMBER);
+			setState(25);
 			match(T__0);
-			setState(3);
-			match(ID);
+			setState(26);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Divide_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Divide_operatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_divide_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterDivide_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitDivide_operator(this);
+		}
+	}
+
+	public final Divide_operatorContext divide_operator() throws RecognitionException {
+		Divide_operatorContext _localctx = new Divide_operatorContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_divide_operator);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(28);
+			match(NUMBER);
+			setState(29);
+			match(T__1);
+			setState(30);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Mod_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Mod_operatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_mod_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterMod_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitMod_operator(this);
+		}
+	}
+
+	public final Mod_operatorContext mod_operator() throws RecognitionException {
+		Mod_operatorContext _localctx = new Mod_operatorContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_mod_operator);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(32);
+			match(NUMBER);
+			setState(33);
+			match(T__2);
+			setState(34);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Add_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Add_operatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_add_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterAdd_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitAdd_operator(this);
+		}
+	}
+
+	public final Add_operatorContext add_operator() throws RecognitionException {
+		Add_operatorContext _localctx = new Add_operatorContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_add_operator);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(36);
+			match(NUMBER);
+			setState(37);
+			match(T__3);
+			setState(38);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Minus_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Minus_operatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_minus_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterMinus_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitMinus_operator(this);
+		}
+	}
+
+	public final Minus_operatorContext minus_operator() throws RecognitionException {
+		Minus_operatorContext _localctx = new Minus_operatorContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_minus_operator);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(40);
+			match(NUMBER);
+			setState(41);
+			match(T__4);
+			setState(42);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Add_assignmentContext extends ParserRuleContext {
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public TerminalNode NUMBER() { return getToken(ParserProjectParser.NUMBER, 0); }
+		public Add_assignmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_add_assignment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterAdd_assignment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitAdd_assignment(this);
+		}
+	}
+
+	public final Add_assignmentContext add_assignment() throws RecognitionException {
+		Add_assignmentContext _localctx = new Add_assignmentContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_add_assignment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(44);
+			variable();
+			setState(45);
+			match(T__5);
+			setState(46);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Minus_assignmentContext extends ParserRuleContext {
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public TerminalNode NUMBER() { return getToken(ParserProjectParser.NUMBER, 0); }
+		public Minus_assignmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_minus_assignment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterMinus_assignment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitMinus_assignment(this);
+		}
+	}
+
+	public final Minus_assignmentContext minus_assignment() throws RecognitionException {
+		Minus_assignmentContext _localctx = new Minus_assignmentContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_minus_assignment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(48);
+			variable();
+			setState(49);
+			match(T__6);
+			setState(50);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Multiply_assignmentContext extends ParserRuleContext {
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public TerminalNode NUMBER() { return getToken(ParserProjectParser.NUMBER, 0); }
+		public Multiply_assignmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_multiply_assignment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterMultiply_assignment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitMultiply_assignment(this);
+		}
+	}
+
+	public final Multiply_assignmentContext multiply_assignment() throws RecognitionException {
+		Multiply_assignmentContext _localctx = new Multiply_assignmentContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_multiply_assignment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(52);
+			variable();
+			setState(53);
+			match(T__7);
+			setState(54);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Divide_assignmentContext extends ParserRuleContext {
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public TerminalNode NUMBER() { return getToken(ParserProjectParser.NUMBER, 0); }
+		public Divide_assignmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_divide_assignment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterDivide_assignment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitDivide_assignment(this);
+		}
+	}
+
+	public final Divide_assignmentContext divide_assignment() throws RecognitionException {
+		Divide_assignmentContext _localctx = new Divide_assignmentContext(_ctx, getState());
+		enterRule(_localctx, 16, RULE_divide_assignment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(56);
+			variable();
+			setState(57);
+			match(T__8);
+			setState(58);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AssignmentContext extends ParserRuleContext {
+		public AssignmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_assignment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterAssignment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitAssignment(this);
+		}
+	}
+
+	public final AssignmentContext assignment() throws RecognitionException {
+		AssignmentContext _localctx = new AssignmentContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_assignment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(60);
+			match(T__9);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Variable_assignmentContext extends ParserRuleContext {
+		public TerminalNode NAME() { return getToken(ParserProjectParser.NAME, 0); }
+		public AssignmentContext assignment() {
+			return getRuleContext(AssignmentContext.class,0);
+		}
+		public VariableContext variable() {
+			return getRuleContext(VariableContext.class,0);
+		}
+		public Variable_assignmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_variable_assignment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterVariable_assignment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitVariable_assignment(this);
+		}
+	}
+
+	public final Variable_assignmentContext variable_assignment() throws RecognitionException {
+		Variable_assignmentContext _localctx = new Variable_assignmentContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_variable_assignment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(62);
+			match(NAME);
+			setState(63);
+			assignment();
+			setState(64);
+			variable();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class VariableContext extends ParserRuleContext {
+		public TerminalNode NUMBER() { return getToken(ParserProjectParser.NUMBER, 0); }
+		public TerminalNode STRING() { return getToken(ParserProjectParser.STRING, 0); }
+		public TerminalNode BOOL() { return getToken(ParserProjectParser.BOOL, 0); }
+		public TerminalNode NAME() { return getToken(ParserProjectParser.NAME, 0); }
+		public VariableContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_variable; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).enterVariable(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ParserProjectListener ) ((ParserProjectListener)listener).exitVariable(this);
+		}
+	}
+
+	public final VariableContext variable() throws RecognitionException {
+		VariableContext _localctx = new VariableContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_variable);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(66);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << NUMBER) | (1L << BOOL) | (1L << NAME) | (1L << STRING))) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -129,10 +626,22 @@ public class ParserProjectParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0003\u0006\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
-		"\u0001\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0004\u0000"+
-		"\u0002\u0001\u0000\u0000\u0000\u0002\u0003\u0005\u0001\u0000\u0000\u0003"+
-		"\u0004\u0005\u0002\u0000\u0000\u0004\u0001\u0001\u0000\u0000\u0000\u0000";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24G\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
+		"\f\t\f\4\r\t\r\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\5\3\5"+
+		"\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3"+
+		"\t\3\n\3\n\3\n\3\n\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3\r\3\r\2\2\16\2\4\6"+
+		"\b\n\f\16\20\22\24\26\30\2\3\4\2\r\16\22\23\2:\2\32\3\2\2\2\4\36\3\2\2"+
+		"\2\6\"\3\2\2\2\b&\3\2\2\2\n*\3\2\2\2\f.\3\2\2\2\16\62\3\2\2\2\20\66\3"+
+		"\2\2\2\22:\3\2\2\2\24>\3\2\2\2\26@\3\2\2\2\30D\3\2\2\2\32\33\7\r\2\2\33"+
+		"\34\7\3\2\2\34\35\7\r\2\2\35\3\3\2\2\2\36\37\7\r\2\2\37 \7\4\2\2 !\7\r"+
+		"\2\2!\5\3\2\2\2\"#\7\r\2\2#$\7\5\2\2$%\7\r\2\2%\7\3\2\2\2&\'\7\r\2\2\'"+
+		"(\7\6\2\2()\7\r\2\2)\t\3\2\2\2*+\7\r\2\2+,\7\7\2\2,-\7\r\2\2-\13\3\2\2"+
+		"\2./\5\30\r\2/\60\7\b\2\2\60\61\7\r\2\2\61\r\3\2\2\2\62\63\5\30\r\2\63"+
+		"\64\7\t\2\2\64\65\7\r\2\2\65\17\3\2\2\2\66\67\5\30\r\2\678\7\n\2\289\7"+
+		"\r\2\29\21\3\2\2\2:;\5\30\r\2;<\7\13\2\2<=\7\r\2\2=\23\3\2\2\2>?\7\f\2"+
+		"\2?\25\3\2\2\2@A\7\22\2\2AB\5\24\13\2BC\5\30\r\2C\27\3\2\2\2DE\t\2\2\2"+
+		"E\31\3\2\2\2\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -17,15 +17,15 @@ add_operator  : NUMBER '+' NUMBER ;
 minus_operator  : NUMBER '-' NUMBER ;     
 
 // Parser assignment operators 
-add_assignment : NUMBER '+=' NUMBER; 
-minus_assignment : NUMBER '-=' NUMBER; 
-multiply_assignment : NUMBER '*=' NUMBER; 
-divide_assignment : NUMBER '/=' NUMBER; 
+add_assignment : variable '+=' NUMBER; 
+minus_assignment : variable '-=' NUMBER; 
+multiply_assignment : variable '*=' NUMBER; 
+divide_assignment : variable '/=' NUMBER; 
 
 // Parser variables
 assignment : '=' ;
 variable_assignment : NAME assignment variable;
-variable : NUMBER | STRING | BOOL ; 
+variable : NUMBER | STRING | BOOL | NAME; 
 
 // Lexer types 
 
