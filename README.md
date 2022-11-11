@@ -19,5 +19,5 @@ How to Use/Run the parser (Mac OS):
 5: In the project folder, run the following commands:
   - antlr4 ParserProject.g4
   - javac ParserProject*.java
-  - grun ParserProject &ltRULE&gt -tree or grun ParserProject &ltRULE>&gt -gui
+  - grun ParserProject \<RULE\> -tree or grun ParserProject \<RULE\>  -gui
   
