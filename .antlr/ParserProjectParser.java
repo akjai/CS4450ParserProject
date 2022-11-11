@@ -20,22 +20,22 @@ public class ParserProjectParser extends Parser {
 		T__9=10, NUMBER=11, BOOL=12, INTEGER=13, FLOAT=14, WHITESPACE=15, NAME=16, 
 		STRING=17, COMMENT=18;
 	public static final int
-		RULE_add_operator = 0, RULE_minus_operator = 1, RULE_multiply_operator = 2, 
-		RULE_divide_operator = 3, RULE_mod_operator = 4, RULE_assignment = 5, 
-		RULE_add_assignment = 6, RULE_minus_assignment = 7, RULE_multiply_assignment = 8, 
-		RULE_divide_assignment = 9, RULE_variable_assignment = 10, RULE_variable = 11;
+		RULE_multiply_operator = 0, RULE_divide_operator = 1, RULE_mod_operator = 2, 
+		RULE_add_operator = 3, RULE_minus_operator = 4, RULE_assignment = 5, RULE_add_assignment = 6, 
+		RULE_minus_assignment = 7, RULE_multiply_assignment = 8, RULE_divide_assignment = 9, 
+		RULE_variable_assignment = 10, RULE_variable = 11;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"add_operator", "minus_operator", "multiply_operator", "divide_operator", 
-			"mod_operator", "assignment", "add_assignment", "minus_assignment", "multiply_assignment", 
-			"divide_assignment", "variable_assignment", "variable"
+			"multiply_operator", "divide_operator", "mod_operator", "add_operator", 
+			"minus_operator", "assignment", "add_assignment", "minus_assignment", 
+			"multiply_assignment", "divide_assignment", "variable_assignment", "variable"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'+'", "'-'", "'*'", "'/'", "'%'", "'='", "'+='", "'-='", "'*='", 
+			null, "'*'", "'/'", "'%'", "'+'", "'-'", "'='", "'+='", "'-='", "'*='", 
 			"'/='"
 		};
 	}
@@ -97,78 +97,6 @@ public class ParserProjectParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	public static class Add_operatorContext extends ParserRuleContext {
-		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
-		public TerminalNode NUMBER(int i) {
-			return getToken(ParserProjectParser.NUMBER, i);
-		}
-		public Add_operatorContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_add_operator; }
-	}
-
-	public final Add_operatorContext add_operator() throws RecognitionException {
-		Add_operatorContext _localctx = new Add_operatorContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_add_operator);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(24);
-			match(NUMBER);
-			setState(25);
-			match(T__0);
-			setState(26);
-			match(NUMBER);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class Minus_operatorContext extends ParserRuleContext {
-		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
-		public TerminalNode NUMBER(int i) {
-			return getToken(ParserProjectParser.NUMBER, i);
-		}
-		public Minus_operatorContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_minus_operator; }
-	}
-
-	public final Minus_operatorContext minus_operator() throws RecognitionException {
-		Minus_operatorContext _localctx = new Minus_operatorContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_minus_operator);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(28);
-			match(NUMBER);
-			setState(29);
-			match(T__1);
-			setState(30);
-			match(NUMBER);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
 	public static class Multiply_operatorContext extends ParserRuleContext {
 		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
 		public TerminalNode NUMBER(int i) {
@@ -182,15 +110,15 @@ public class ParserProjectParser extends Parser {
 
 	public final Multiply_operatorContext multiply_operator() throws RecognitionException {
 		Multiply_operatorContext _localctx = new Multiply_operatorContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_multiply_operator);
+		enterRule(_localctx, 0, RULE_multiply_operator);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(32);
+			setState(24);
 			match(NUMBER);
-			setState(33);
-			match(T__2);
-			setState(34);
+			setState(25);
+			match(T__0);
+			setState(26);
 			match(NUMBER);
 			}
 		}
@@ -218,15 +146,15 @@ public class ParserProjectParser extends Parser {
 
 	public final Divide_operatorContext divide_operator() throws RecognitionException {
 		Divide_operatorContext _localctx = new Divide_operatorContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_divide_operator);
+		enterRule(_localctx, 2, RULE_divide_operator);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(36);
+			setState(28);
 			match(NUMBER);
-			setState(37);
-			match(T__3);
-			setState(38);
+			setState(29);
+			match(T__1);
+			setState(30);
 			match(NUMBER);
 			}
 		}
@@ -254,7 +182,79 @@ public class ParserProjectParser extends Parser {
 
 	public final Mod_operatorContext mod_operator() throws RecognitionException {
 		Mod_operatorContext _localctx = new Mod_operatorContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_mod_operator);
+		enterRule(_localctx, 4, RULE_mod_operator);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(32);
+			match(NUMBER);
+			setState(33);
+			match(T__2);
+			setState(34);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Add_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Add_operatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_add_operator; }
+	}
+
+	public final Add_operatorContext add_operator() throws RecognitionException {
+		Add_operatorContext _localctx = new Add_operatorContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_add_operator);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(36);
+			match(NUMBER);
+			setState(37);
+			match(T__3);
+			setState(38);
+			match(NUMBER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Minus_operatorContext extends ParserRuleContext {
+		public List<TerminalNode> NUMBER() { return getTokens(ParserProjectParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(ParserProjectParser.NUMBER, i);
+		}
+		public Minus_operatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_minus_operator; }
+	}
+
+	public final Minus_operatorContext minus_operator() throws RecognitionException {
+		Minus_operatorContext _localctx = new Minus_operatorContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_minus_operator);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
