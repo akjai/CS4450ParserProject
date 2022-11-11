@@ -1,7 +1,7 @@
 grammar ParserProject;
 
 // Lexer types 
-NUMBER : '-'?INTEGER | '-'?FLOAT ;   
+NUMBER : '-'NUMBER | INTEGER | FLOAT ;   
 BOOL : 'True' | 'False';  
 INTEGER : '0' | [0-9]+ ;   
 FLOAT :  INTEGER '.' [0-9]+ ; 
