@@ -18,4 +18,6 @@ How to Use/Run the parser (Mac OS):
   - git clone https://github.com/akjai/CS4450ParserProject.git
 5: In the project folder, run the following commands:
   - antlr4 ParserProject.g4
-  - 
+  - javac ParserProject*.java
+  - grun ParserProject <RULE> -tree or grun ParserProject <RULE> -gui
+  
