@@ -1,6 +1,6 @@
 # CS4450ParserProject
 
-Team members: Ankit Jain, Sam Spell, James Tipton, Thadeus Meneses
+Team members: Ankit Jain, Sam Spell, James Tipton, Thadeus Meneses, Austin Neumann
 
 Project Requirements: 
 In order to run this project, you need to have Java and Antlr4 installed on your device, and the antlr4 library downloaded using:
@@ -22,3 +22,15 @@ How to Use/Run the parser (Mac OS):
   - grun ParserProject \<RULE\> -tree or grun ParserProject \<RULE\>  -gui
   
 All in one line: antlr4 ParserProject.g4; javac ParserProject*.java; grun ParserProject \<RULE\>  -gui
+
+How to Use/Run the parser (Windows):
+1: Download antlr4 version 4.11.1 (or other version) from https://www.antlr.org/download.html
+2: Download latest version of Java for your device.
+3: Add the antlr-4.11.1-complete.jar to the CLASSPATH by pressing win+R, typing in sysdm.cpl, opening System Properties, going to Environment variables, and creating/appending to the CLASSPATH.
+5: Create two batch files in system PATH, "antlr4.bat" and "grun.bat".
+6: Clone the repo into your local directory.
+  - git clone https://github.com/akjai/CS4450ParserProject.git
+7: In the project folder, run the following commands:
+  - antlr4 ParserProject.g4
+  - javac ParserProject*.java
+  - grun ParserProject \<RULE\> -tree or grun ParserProject \<RULE\>  -gui
