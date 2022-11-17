@@ -91,7 +91,7 @@ for_loop:
     'for ' NAME ' in ' function_call ':\n\t' (('\n\t')*block)* ;
 
 function:
-    'def ' function_call ':\n\t' (('\n\t')*block)* ;
+    'def ' function_call ':\n\t' (('\n\t')*block)* '\n' ;
 
 function_call: 
     NAME '(' (variable(','variable)*)? ')' |            // zero or infinite variables
