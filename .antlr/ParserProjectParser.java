@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Generated from /Users/jamestipton/Documents/GitHub/CS4450ParserProject/ParserProject.g4 by ANTLR 4.9.2
+=======
+// Generated from /Users/samspell/Documents/Propl/CS4450ParserProject/ParserProject.g4 by ANTLR 4.9.2
+>>>>>>> d95b696ea4fba5d07d0c26fe2acf51b0e830a846
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
