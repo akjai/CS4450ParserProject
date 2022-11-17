@@ -9,7 +9,6 @@ WHITESPACE : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
 NAME : [a-zA-Z|_][a-zA-Z0-9|_]* ; 
 STRING : '"' ~('"')* '"' ;
 COMMENT : '#' ~('\r' | '\n')* -> skip ;
-OPERATOR_SYMBOL: '*' | '/' | '+' | '-' | '%';
 
 // BOOL value treated as 1 or 0 by compiler
 number:
@@ -24,8 +23,8 @@ operators:
     number '+' number  |
     STRING '+' STRING |
     number '-' number |
-    NAME OPERATOR_SYMBOL NAME ;
-
+    NAME operator_symbol NAME 
+    ;
 
 assignments:
     NAME '+=' number |
@@ -56,14 +55,16 @@ expression:
     assignments ;
     
 condition:
-    variable |
     condition condition_symbol condition |
-    condition OPERATOR_SYMBOL condition;
+    condition operator_symbol condition |
+    variable ;
     
     
 
 condition_symbol:
-    '<'|'>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
+    '<' | '>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
+
+operator_symbol: '*' | '/' | '+' | '-' | '%';
 
 comparison:
     number condition_symbol number |

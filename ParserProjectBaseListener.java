@@ -15,6 +15,18 @@ public class ParserProjectBaseListener implements ParserProjectListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterNumber(ParserProjectParser.NumberContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNumber(ParserProjectParser.NumberContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterOperators(ParserProjectParser.OperatorsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -142,6 +154,30 @@ public class ParserProjectBaseListener implements ParserProjectListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCondition_symbol(ParserProjectParser.Condition_symbolContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperator_symbol(ParserProjectParser.Operator_symbolContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperator_symbol(ParserProjectParser.Operator_symbolContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterComparison(ParserProjectParser.ComparisonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitComparison(ParserProjectParser.ComparisonContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

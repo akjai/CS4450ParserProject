@@ -7,6 +7,16 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface ParserProjectListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#number}.
+	 * @param ctx the parse tree
+	 */
+	void enterNumber(ParserProjectParser.NumberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#number}.
+	 * @param ctx the parse tree
+	 */
+	void exitNumber(ParserProjectParser.NumberContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ParserProjectParser#operators}.
 	 * @param ctx the parse tree
 	 */
@@ -116,4 +126,24 @@ public interface ParserProjectListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitCondition_symbol(ParserProjectParser.Condition_symbolContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#operator_symbol}.
+	 * @param ctx the parse tree
+	 */
+	void enterOperator_symbol(ParserProjectParser.Operator_symbolContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#operator_symbol}.
+	 * @param ctx the parse tree
+	 */
+	void exitOperator_symbol(ParserProjectParser.Operator_symbolContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#comparison}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparison(ParserProjectParser.ComparisonContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#comparison}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparison(ParserProjectParser.ComparisonContext ctx);
 }
