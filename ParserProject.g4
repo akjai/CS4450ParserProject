@@ -26,7 +26,7 @@ operators:
 
 assignments:
     number '+=' number |
-    STRING '+=' STRING
+    STRING '+=' STRING |
     number '-=' number |
     variable '*=' number |
     number '*=' variable |
@@ -51,7 +51,7 @@ condition:
 comparison:
     number condition_symbol number |
     STRING '==' STRING |
-    STRING '!=' STRING
+    STRING '!=' STRING |
     STRING 'and' STRING |
     STRING 'or' STRING |
     STRING 'not' STRING;
