@@ -25,12 +25,12 @@ operators:
     number '-' number;
 
 assignments:
-    number '+=' number |
-    STRING '+=' STRING |
-    number '-=' number |
-    variable '*=' number |
-    number '*=' variable |
-    number '/=' number ;
+    NAME '+=' number |
+    NAME '+=' STRING |
+    NAME '-=' number |
+    NAME '*=' number |
+    NAME '*=' variable |
+    NAME '/=' number ;
 
 // Parser variables
 assignment : '=' ;
