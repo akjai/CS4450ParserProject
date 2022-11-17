@@ -1,4 +1,4 @@
-// Generated from /Users/jamestipton/Documents/GitHub/CS4450ParserProject/ParserProject.g4 by ANTLR 4.9.2
+// Generated from /Users/samspell/Documents/Propl/ProplTest/CS4450ParserProject/ParserProject.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -43,9 +43,9 @@ public class ParserProjectParser extends Parser {
 		return new String[] {
 			null, "'-'", "'*'", "'/'", "'%'", "'+'", "'+='", "'-='", "'*='", "'/='", 
 			"'='", "'if '", "':'", "'\n\t'", "'elif '", "'else '", "'<'", "'>'", 
-			"'>='", "'<='", "'=='", "'!='", "'and'", "'or'", "'not'", "'\n'", "'\t'", 
-			"'\nreturn '", "'while'", "':\n\t'", "'for'", "'in'", "'def '", "'('", 
-			"','", "')'"
+			"'>='", "'<='", "'=='", "'!='", "' and '", "' or '", "' not '", "'\n'", 
+			"'\t'", "'return '", "'while '", "':\n\t'", "'for '", "' in '", "'def '", 
+			"'('", "','", "')'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();

@@ -63,7 +63,7 @@ condition:
     variable ;
     
 condition_symbol:
-    '<' | '>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
+    '<' | '>' | '>=' | '<=' | '==' | '!=' | ' and ' | ' or ' | ' not ';
 
 operator_symbol: '*' | '/' | '+' | '-' | '%';
 
@@ -71,24 +71,24 @@ comparison:
     number condition_symbol number |
     STRING '==' STRING |
     STRING '!=' STRING |
-    STRING 'and' STRING |
-    STRING 'or' STRING |
-    STRING 'not' STRING;
+    STRING ' and ' STRING |
+    STRING ' or ' STRING |
+    STRING ' not ' STRING;
 
 block:
     expression |
     ('\n'('\t')*expression)+ |
     while_loop |
     for_loop |
-    '\nreturn ' variable
+    'return ' variable
     ;
 
 while_loop:
-    'while' condition ':\n\t' (('\n\t')*block)* ;
+    'while ' condition ':\n\t' (('\n\t')*block)* ;
 
 for_loop:
-    'for' NAME 'in' NAME ':\n\t' (('\n\t')*block)* |
-    'for' NAME 'in' function_call ':\n\t' (('\n\t')*block)* ;
+    'for ' NAME ' in ' NAME ':\n\t' (('\n\t')*block)* |
+    'for ' NAME ' in ' function_call ':\n\t' (('\n\t')*block)* ;
 
 function:
     'def ' function_call ':\n\t' (('\n\t')*block)* ;
