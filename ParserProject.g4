@@ -12,17 +12,39 @@ COMMENT : '#' ~('\r' | '\n')* -> skip ;
 
 // Parser arithmetic operators 
 operators:
-'-'*NUMBER '*' '-'*NUMBER  |    
-'-'*NUMBER '/' '-'*NUMBER  |   
-'-'*NUMBER '%' '-'*NUMBER  |    
-'-'*NUMBER '+' '-'*NUMBER  |
-'-'*NUMBER '-' '-'*NUMBER |
-variable '+=' '-'*NUMBER |
-variable '-=' '-'*NUMBER |
-variable '*=' '-'*NUMBER |
-variable '/=' '-'*NUMBER ;
+    '-'*NUMBER '*' '-'*NUMBER |
+    BOOL '*' BOOL |   
+    '-'*NUMBER '/' '-'*NUMBER | 
+    variable '*' '-'*NUMBER | 
+    vari '%' '-'*NUMBER  |   
+    '-'*NUMBER '%' '-'*NUMBER  |    
+    variable '+' variable  |
+    '-'*NUMBER '-' '-'*NUMBER ;
+
+assignments:
+    variable '+=' '-'*NUMBER |
+    variable '-=' '-'*NUMBER |
+    variable '*=' '-'*NUMBER |
+    variable '/=' '-'*NUMBER ;
 
 // Parser variables
 assignment : '=' ;
 variable_assignment : NAME assignment variable;
-variable : NUMBER | STRING | BOOL | NAME; 
+variable : '-'*NUMBER | STRING | BOOL | NAME; 
+
+// conditionals
+if_statement:
+    'if' condition ':' expression |
+    'if' condition ':' expression 'else:' expression;
+
+expression: 
+    assignments ;
+
+condition:
+    variable |
+    variable condition_symbol variable|
+    
+
+condition_symbol:
+    '>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
+
