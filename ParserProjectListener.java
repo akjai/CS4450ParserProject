@@ -146,4 +146,44 @@ public interface ParserProjectListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitComparison(ParserProjectParser.ComparisonContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#while_loop}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_loop(ParserProjectParser.While_loopContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#while_loop}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_loop(ParserProjectParser.While_loopContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#for_loop}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_loop(ParserProjectParser.For_loopContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#for_loop}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_loop(ParserProjectParser.For_loopContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#function}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction(ParserProjectParser.FunctionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#function}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction(ParserProjectParser.FunctionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#function_call}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction_call(ParserProjectParser.Function_callContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#function_call}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction_call(ParserProjectParser.Function_callContext ctx);
 }

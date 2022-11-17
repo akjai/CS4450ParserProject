@@ -59,8 +59,6 @@ condition:
     condition operator_symbol condition |
     variable ;
     
-    
-
 condition_symbol:
     '<' | '>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
 
@@ -75,6 +73,14 @@ comparison:
     STRING 'not' STRING;
 
 
+while_loop:
+    'while' condition ':\n\t' expression (expression'\n\t')* ;
 
+for_loop:
+    'for' NAME 'in' NAME ':\n\t' expression '\n' ('\t'expression'\n')* |
+    'for' NAME 'in' function_call ':\n\t' expression '\n' ('\t'expression'\n')* ;
 
+function:
+    BOOL ;
 
+function_call: NAME '(' (NAME(','NAME)*)? ')' ;
