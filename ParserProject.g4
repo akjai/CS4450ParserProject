@@ -27,8 +27,9 @@ operators:
 
 assignments:
     NAME '+=' number |
-    NAME '+=' STRING |
+    NAME '+=' NAME |
     NAME '-=' number |
+    NAME '-=' NAME |
     NAME '*=' number |
     NAME '*=' variable |
     NAME '/=' number |
@@ -53,7 +54,8 @@ else_statement:
 
 expression: 
     assignments |
-    function_call ;
+    function_call 
+    ;
     
 condition:
     condition condition_symbol condition |
@@ -78,16 +80,22 @@ block:
     ('\n'('\t')*expression)+ |
     while_loop |
     for_loop |
+    '\nreturn ' variable
     ;
 
 while_loop:
-    'while' condition ':\n\t' block ;
+    'while' condition ':\n\t' (('\n\t')*block)* ;
 
 for_loop:
-    'for' NAME 'in' NAME ':\n\t' block |
-    'for' NAME 'in' function_call ':\n\t' block ;
+    'for' NAME 'in' NAME ':\n\t' (('\n\t')*block)* |
+    'for' NAME 'in' function_call ':\n\t' (('\n\t')*block)* ;
 
 function:
-    'def ' NAME ;
+    'def ' function_call ':\n\t' (('\n\t')*block)* ;
 
-function_call: NAME '(' (NAME(','NAME)*)? ')' ;
+function_call: 
+    NAME '(' (variable(','variable)*)? ')' |            // zero or infinite variables
+    NAME '(' (function_call(','variable)*)? ')' |       // zero or one function calls, then zero or infinite variables
+    NAME '(' (variable(','function_call)*)? ')' |       // zero or one variables, then zero or infinite function calls
+    NAME '(' (function_call(','function_call)*)? ')'    // zero or infinite function calls
+    ;
