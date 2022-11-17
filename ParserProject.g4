@@ -41,15 +41,15 @@ variable : '-'*NUMBER | STRING | BOOL | NAME;
 
 // conditionals
 if_statement:
-    | 'if' condition ':' '\n\t' expression elif_statement 
-    | 'if' condition ':' '\n\t' expression else_statement
-    | 'if' condition ':' '\n\t' expression;
+    | 'if ' condition ':' '\n\t' expression elif_statement 
+    | 'if ' condition ':' '\n\t' expression else_statement
+    | 'if ' condition ':' '\n\t' expression;
 elif_statement:
-    | 'elif' condition ':' '\n\t' expression elif_statement 
-    | 'elif' condition ':' '\n\t' expression else_statement
-    | 'elif' condition ':' '\n\t' expression;
+    | 'elif ' condition ':' '\n\t' expression elif_statement 
+    | 'elif ' condition ':' '\n\t' expression else_statement
+    | 'elif ' condition ':' '\n\t' expression;
 else_statement:
-    | 'else' ':' '\n\t' expression;
+    | 'else ' ':' '\n\t' expression;
 
 expression: 
     assignments ;
@@ -77,10 +77,10 @@ while_loop:
     'while' condition ':\n\t' expression (expression'\n\t')* ;
 
 for_loop:
-    'for' NAME 'in' NAME ':\n\t' expression  ('\n\t'expression)* |
-    'for' NAME 'in' function_call ':\n\t' expression ('\n\t'expression)* ;
+    'for ' NAME ' in ' NAME ':\n\t' expression  ('\n\t'expression)* |
+    'for ' NAME ' in ' function_call ':\n\t' expression ('\n\t'expression)* ;
 
 function:
-    BOOL ;
+    'def ' NAME ;
 
 function_call: NAME '(' (NAME(','NAME)*)? ')' ;
