@@ -54,10 +54,12 @@ else_statement:
 
 expression: 
     assignments ;
-
+    
 condition:
     variable |
-    variable condition_symbol variable;
+    condition condition_symbol condition |
+    condition OPERATOR_SYMBOL condition;
+    
     
 
 condition_symbol:
