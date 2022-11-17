@@ -30,9 +30,10 @@ WHITESPACE=29
 NAME=30
 STRING=31
 COMMENT=32
-'*'=1
-'/'=2
-'-'=3
+OPERATOR_SYMBOL=33
+'-'=1
+'*'=2
+'/'=3
 '%'=4
 '+'=5
 '+='=6
