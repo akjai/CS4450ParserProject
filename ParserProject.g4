@@ -74,7 +74,7 @@ comparison:
 
 
 while_loop:
-    'while' condition ':\n\t' expression (expression'\n\t')* ;
+    'while' condition ':\n\t' expression ('\n\t'expression)* ;
 
 for_loop:
     'for' NAME 'in' NAME ':\n\t' expression  ('\n\t'expression)* |
