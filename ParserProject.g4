@@ -23,8 +23,7 @@ operators:
     number '+' number  |
     STRING '+' STRING |
     number '-' number |
-    NAME operator_symbol NAME 
-    ;
+    NAME operator_symbol NAME;
 
 assignments:
     NAME '+=' number |
@@ -32,7 +31,8 @@ assignments:
     NAME '-=' number |
     NAME '*=' number |
     NAME '*=' variable |
-    NAME '/=' number ;
+    NAME '/=' number |
+    NAME '=' variable;
 
 // Parser variables
 assignment : '=' ;
@@ -77,8 +77,8 @@ while_loop:
     'while' condition ':\n\t' expression (expression'\n\t')* ;
 
 for_loop:
-    'for' NAME 'in' NAME ':\n\t' expression '\n' ('\t'expression'\n')* |
-    'for' NAME 'in' function_call ':\n\t' expression '\n' ('\t'expression'\n')* ;
+    'for' NAME 'in' NAME ':\n\t' expression  ('\n\t'expression)* |
+    'for' NAME 'in' function_call ':\n\t' expression ('\n\t'expression)* ;
 
 function:
     BOOL ;
