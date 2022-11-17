@@ -52,7 +52,8 @@ else_statement:
     | 'else' ':' '\n\t' expression;
 
 expression: 
-    assignments ;
+    assignments |
+    function_call ;
     
 condition:
     condition condition_symbol condition |
@@ -71,7 +72,6 @@ comparison:
     STRING 'and' STRING |
     STRING 'or' STRING |
     STRING 'not' STRING;
-
 
 while_loop:
     'while' condition ':\n\t' expression (expression'\n\t')* ;
