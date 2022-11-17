@@ -68,9 +68,6 @@ comparison:
     STRING 'or' STRING |
     STRING 'not' STRING;
 
-if_statement:
-    'if' condition ':\n\t' expression'\n'* |
-    'if' condition ':\n\t' expression'\n'* 'else:\n\t' expression;
 
 
 
