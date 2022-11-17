@@ -43,9 +43,9 @@ public class ParserProjectParser extends Parser {
 		return new String[] {
 			null, "'-'", "'*'", "'/'", "'%'", "'+'", "'+='", "'-='", "'*='", "'/='", 
 			"'='", "'if '", "':'", "'\n\t'", "'elif '", "'else '", "'<'", "'>'", 
-			"'>='", "'<='", "'=='", "'!='", "'and'", "'or'", "'not'", "'\n'", "'\t'", 
-			"'\nreturn '", "'while'", "':\n\t'", "'for'", "'in'", "'def '", "'('", 
-			"','", "')'"
+			"'>='", "'<='", "'=='", "'!='", "' and '", "' or '", "' not '", "'\n'", 
+			"'\t'", "'return '", "'while '", "':\n\t'", "'for '", "' in '", "'def '", 
+			"'('", "','", "')'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
