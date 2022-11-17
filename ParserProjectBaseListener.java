@@ -183,6 +183,18 @@ public class ParserProjectBaseListener implements ParserProjectListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterBlock(ParserProjectParser.BlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBlock(ParserProjectParser.BlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterWhile_loop(ParserProjectParser.While_loopContext ctx) { }
 	/**
 	 * {@inheritDoc}

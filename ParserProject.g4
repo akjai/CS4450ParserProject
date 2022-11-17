@@ -73,12 +73,19 @@ comparison:
     STRING 'or' STRING |
     STRING 'not' STRING;
 
+block:
+    expression |
+    ('\n'('\t')*expression)+ |
+    while_loop |
+    for_loop |
+    ;
+
 while_loop:
-    'while' condition ':\n\t' expression (expression'\n\t')* ;
+    'while' condition ':\n\t' block ;
 
 for_loop:
-    'for' NAME 'in' NAME ':\n\t' expression  ('\n\t'expression)* |
-    'for' NAME 'in' function_call ':\n\t' expression ('\n\t'expression)* ;
+    'for' NAME 'in' NAME ':\n\t' block |
+    'for' NAME 'in' function_call ':\n\t' block ;
 
 function:
     BOOL ;

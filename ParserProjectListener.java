@@ -147,6 +147,16 @@ public interface ParserProjectListener extends ParseTreeListener {
 	 */
 	void exitComparison(ParserProjectParser.ComparisonContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ParserProjectParser#block}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlock(ParserProjectParser.BlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserProjectParser#block}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlock(ParserProjectParser.BlockContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ParserProjectParser#while_loop}.
 	 * @param ctx the parse tree
 	 */
