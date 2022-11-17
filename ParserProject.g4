@@ -12,11 +12,10 @@ COMMENT : '#' ~('\r' | '\n')* -> skip ;
 
 // Parser arithmetic operators 
 operators:
-    '-'*NUMBER '*' '-'*NUMBER |
-    BOOL '*' BOOL |   
-    '-'*NUMBER '/' '-'*NUMBER | 
+    variable '*' variable | 
+    variable '/' variable | 
     variable '*' '-'*NUMBER | 
-    vari '%' '-'*NUMBER  |   
+    variable '%' '-'*NUMBER  |   
     '-'*NUMBER '%' '-'*NUMBER  |    
     variable '+' variable  |
     '-'*NUMBER '-' '-'*NUMBER ;
