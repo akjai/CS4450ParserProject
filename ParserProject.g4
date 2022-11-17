@@ -33,17 +33,24 @@ variable : '-'*NUMBER | STRING | BOOL | NAME;
 
 // conditionals
 if_statement:
-    'if' condition ':' expression |
-    'if' condition ':' expression 'else:' expression;
+    | 'if' condition ':' '\n\t' expression elif_statement 
+    | 'if' condition ':' '\n\t' expression else_statement
+    | 'if' condition ':' '\n\t' expression;
+elif_statement:
+    | 'elif' condition ':' '\n\t' expression elif_statement 
+    | 'elif' condition ':' '\n\t' expression else_statement
+    | 'elif' condition ':' '\n\t' expression;
+else_statement:
+    | 'else' ':' '\n\t' expression;
 
 expression: 
-    assignments ;
+    |assignments;
 
 condition:
     variable |
-    variable condition_symbol variable|
+    variable condition_symbol variable;
     
 
 condition_symbol:
-    '>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
+    '<'|'>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
 
