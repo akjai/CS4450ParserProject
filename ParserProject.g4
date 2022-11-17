@@ -10,40 +10,56 @@ NAME : [a-zA-Z|_][a-zA-Z0-9|_]* ;
 STRING : '"' ~('"')* '"' ;
 COMMENT : '#' ~('\r' | '\n')* -> skip ;
 
+// BOOL value treated as 1 or 0 by compiler
+number:
+'-'*NUMBER | BOOL;
+
 // Parser arithmetic operators 
 operators:
-    variable '*' variable | 
-    variable '/' variable | 
-    variable '*' '-'*NUMBER | 
-    variable '%' '-'*NUMBER  |   
-    '-'*NUMBER '%' '-'*NUMBER  |    
-    variable '+' variable  |
-    '-'*NUMBER '-' '-'*NUMBER ;
+    number '*' variable | 
+    variable '*' number |
+    number '/' number | 
+    number '%' number  |     
+    number '+' number  |
+    STRING '+' STRING |
+    number '-' number;
 
 assignments:
-    variable '+=' '-'*NUMBER |
-    variable '-=' '-'*NUMBER |
-    variable '*=' '-'*NUMBER |
-    variable '/=' '-'*NUMBER ;
+    number '+=' number |
+    STRING '+=' STRING
+    number '-=' number |
+    variable '*=' number |
+    number '*=' variable |
+    number '/=' number ;
 
 // Parser variables
 assignment : '=' ;
 variable_assignment : NAME assignment variable;
 variable : '-'*NUMBER | STRING | BOOL | NAME; 
 
-// conditionals
-if_statement:
-    'if' condition ':' expression |
-    'if' condition ':' expression 'else:' expression;
-
 expression: 
-    assignments ;
-
-condition:
-    variable |
-    variable condition_symbol variable|
-    
+    assignments |
+    variable_assignment;
 
 condition_symbol:
     '>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
+
+condition:
+    variable |
+    comparison;
+
+comparison:
+    number condition_symbol number |
+    STRING '==' STRING |
+    STRING '!=' STRING
+    STRING 'and' STRING |
+    STRING 'or' STRING |
+    STRING 'not' STRING;
+
+// conditionals
+if_statement:
+    'if' condition ':\n\t' expression'\n'* |
+    'if' condition ':\n\t' expression'\n'* 'else:\n\t' expression;
+
+
 
