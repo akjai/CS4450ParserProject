@@ -54,16 +54,12 @@ expression:
 
 condition:
     variable |
-    variable condition_symbol variable|
+    variable condition_symbol variable;
     
 
 condition_symbol:
     '<'|'>' | '>=' | '<=' | '==' | '!=' | 'and' | 'or' | 'not';
 
-condition:
-    variable |
-    comparison;
-
 comparison:
     number condition_symbol number |
     STRING '==' STRING |
@@ -72,26 +68,6 @@ comparison:
     STRING 'or' STRING |
     STRING 'not' STRING;
 
-// conditionals
-if_statement:
-    'if' condition ':\n\t' expression'\n'* |
-    'if' condition ':\n\t' expression'\n'* 'else:\n\t' expression;
-
-
-
-condition:
-    variable |
-    comparison;
-
-comparison:
-    number condition_symbol number |
-    STRING '==' STRING |
-    STRING '!=' STRING |
-    STRING 'and' STRING |
-    STRING 'or' STRING |
-    STRING 'not' STRING;
-
-// conditionals
 if_statement:
     'if' condition ':\n\t' expression'\n'* |
     'if' condition ':\n\t' expression'\n'* 'else:\n\t' expression;
