@@ -2,6 +2,8 @@
 
 Team members: Ankit Jain, Sam Spell, James Tipton, Thadeus Meneses, Austin Neumann
 
+This project is a parser for the Python programming language. It will create a parse tree for statements that match Python code. 
+
 Project Requirements: 
 In order to run this project, you need to have Java and Antlr4 installed on your device, and the antlr4 library downloaded using:
 pip install antlr4-python3-runtime
