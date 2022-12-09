@@ -42,15 +42,16 @@ variable : '-'*NUMBER | STRING | BOOL | NAME;
 
 // conditionals
 if_statement:
-    | 'if ' condition ':' '\n\t' expression elif_statement 
-    | 'if ' condition ':' '\n\t' expression else_statement
-    | 'if ' condition ':' '\n\t' expression;
+    'if ' condition ':\n\t' (('\n\t')*block)* '\n'
+    | 'if ' condition ':\n\t' (('\n\t')*block)* elif_statement 
+    | 'if ' condition ':\n\t' (('\n\t')*block)* else_statement
+    ;
 elif_statement:
-    | 'elif ' condition ':' '\n\t' expression elif_statement 
-    | 'elif ' condition ':' '\n\t' expression else_statement
-    | 'elif ' condition ':' '\n\t' expression;
+    'elif ' condition ':\n\t' (('\n\t')*block)* elif_statement 
+    | 'elif ' condition ':\n\t' (('\n\t')*block)* else_statement
+    | 'elif ' condition ':\n\t' (('\n\t')*block)* '\n';
 else_statement:
-    | 'else ' ':' '\n\t' expression;
+    | 'else ' ':\n\t' (('\n\t')*block)* '\n';
 
 expression: 
     assignments |
